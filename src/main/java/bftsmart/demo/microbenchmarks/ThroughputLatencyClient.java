@@ -250,7 +250,7 @@ public class ThroughputLatencyClient {
                 else
                         reply = proxy.invokeOrdered(request);
                 long latency = System.nanoTime() - last_send_instant;
-                System.out.println("Receive: " + id + " " + System.nanoTime());
+                System.out.println("Receive: " + i + " " + System.nanoTime());
                 try {
                     if (reply != null) latencies.put(id + "\t" + System.currentTimeMillis() + "\t" + latency + "\n");
                 } catch (InterruptedException ex) {
@@ -291,7 +291,7 @@ public class ThroughputLatencyClient {
                 else
                         proxy.invokeOrdered(request);
                 long latency = System.nanoTime() - last_send_instant;
-                System.out.println("Receive: " + id + " " + System.nanoTime());
+                System.out.println("Receive: " + i + " " + System.nanoTime());
                 try {
                     latencies.put(id + "\t" + System.currentTimeMillis() + "\t" + latency + "\n");
                 } catch (InterruptedException ex) {
