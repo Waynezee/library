@@ -282,7 +282,7 @@ public class ThroughputLatencyClient {
 
             System.out.println("Executing experiment for " + numberOfOps / 2 + " ops");
 
-            for (int i = 0; i < numberOfOps / 2; i++, req++) {
+            for (int i = numberOfOps / 2; i < numberOfOps; i++, req++) {
                 long last_send_instant = System.nanoTime();
                 if (verbose) System.out.print(this.id + " // Sending req " + req + "...");
                 System.out.println("Send: " + i + " " + System.nanoTime());
